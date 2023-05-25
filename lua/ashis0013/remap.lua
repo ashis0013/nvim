@@ -10,7 +10,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
-keymap("n", "<A-q>", ":bdelete<CR>", opts)
+keymap("n", "<M-q>", ":bdelete<CR>", opts)
 
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)

@@ -12,11 +12,7 @@ return require('packer').startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
-    }
+    use "windwp/nvim-autopairs"
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -51,12 +47,7 @@ return require('packer').startup(function(use)
         }
     })
 
-    use {
-        'numToStr/Comment.nvim',
-        config = function()
-            require('Comment').setup()
-        end
-    }
+    use 'numToStr/Comment.nvim'
 
     use "akinsho/toggleterm.nvim"
     use 'f-person/git-blame.nvim'
