@@ -47,7 +47,12 @@ return require('packer').startup(function(use)
         }
     })
 
-    use 'numToStr/Comment.nvim'
+      use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
     use "akinsho/toggleterm.nvim"
     use 'f-person/git-blame.nvim'
@@ -57,4 +62,40 @@ return require('packer').startup(function(use)
             'kyazdani42/nvim-web-devicons', -- optional, for file icon
         },
     }
+    use {'akinsho/git-conflict.nvim', tag = "*", config = function()
+      require('git-conflict').setup()
+    end
+    }
+    use({
+      "utilyre/barbecue.nvim",
+      tag = "*",
+      requires = {
+        "SmiteshP/nvim-navic",
+      },
+      config = function()
+        require("barbecue").setup()
+      end,
+    })
+    use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+        require('gitsigns').setup()
+      end
+    }
+
+  use {
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function()
+          require("nvim-surround").setup()
+      end
+  }
+
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use({
+		"rest-nvim/rest.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+
 end)

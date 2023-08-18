@@ -7,16 +7,10 @@ end
 nvimtree.setup {
   disable_netrw        = true,
   hijack_netrw         = true,
-  open_on_setup        = false,
-  ignore_ft_on_setup   = {},
   auto_reload_on_write = true,
   open_on_tab          = false,
   hijack_cursor        = true,
   update_cwd           = true,
-  update_to_buf_dir    = {
-    enable = true,
-    auto_open = true,
-  },
   diagnostics = {
     enable = true,
     icons = {
@@ -46,18 +40,8 @@ nvimtree.setup {
   },
   view = {
     width = 40,
-    height = 30,
     hide_root_folder = false,
     side = 'left',
-    auto_resize = true,
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = { "l", "<CR>", "o" }, action= "edit" },
-        { key = "h", action = "close_node" },
-        { key = "v", action = "vsplit" },
-      },
-    },
     number = false,
     relativenumber = false,
     signcolumn = "yes"
