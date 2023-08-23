@@ -12,6 +12,11 @@ keymap("n", "<Tab>", ":bnext<CR>", opts)
 keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
 keymap("n", "<M-q>", ":bdelete<CR>", opts)
 
+keymap("n", "<C-h>", ":TmuxNavigateLeft", opts)
+keymap("n", "<C-j>", ":TmuxNavigateDown", opts)
+keymap("n", "<C-k>", ":TmuxNavigateUp", opts)
+keymap("n", "<C-l>", ":TmuxNavigateRight", opts)
+
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
