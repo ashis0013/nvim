@@ -51,3 +51,12 @@ vim.g.netrw_winsize = 25
 for k, v in pairs(options) do
     vim.opt[k] = v
 end
+
+vim.api.nvim_create_augroup('AutoFormatting', {})
+vim.api.nvim_create_autocmd('BufWritePre', {
+  pattern = '*.go',
+  group = 'AutoFormatting',
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
